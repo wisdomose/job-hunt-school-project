@@ -1,0 +1,43 @@
+html {
+  font-family: roboto;
+  height: 100%;
+}
+body {
+  color: #333333;
+  height: 100%;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.notification__wrapper {
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+.notification {
+  color: #ffffff;
+  padding: 10px 20px;
+  animation: enter 500ms ease-in-out;
+}
+
+.notification.error {
+  background-color: #ff0000b4;
+}
+.notification.success {
+  background-color: #056405b4;
+}
+
+.required {
+  color: #ff0000b4;
+  font-weight: bold;
+}
